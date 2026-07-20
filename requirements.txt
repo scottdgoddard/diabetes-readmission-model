@@ -1,0 +1,13 @@
+pandas>=2.2
+numpy>=1.26
+scikit-learn>=1.4
+lightgbm>=4.3
+shap>=0.45
+matplotlib>=3.8
+fastapi>=0.110
+uvicorn[standard]>=0.29
+pydantic>=2.6
+duckdb>=0.10
+sqlalchemy>=2.0
+pytest>=8.0
+python-dotenv>=1.0
