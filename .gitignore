@@ -2,4 +2,5 @@ __pycache__/
 *.pyc
 .venv/
 .env
-data/git add 
+data/
+.DS_Store
