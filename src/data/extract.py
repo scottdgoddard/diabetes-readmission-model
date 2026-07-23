@@ -48,7 +48,7 @@ admissions_base AS (
 
 -- Exclude admissions ending in death or hospice discharge -- a patient who
 -- died cannot be "readmitted." Run the check_discharge_locations() helper
--- below first to confirm these string patterns match your actual data.
+-- below first to confirm these string patterns match the actual data.
 eligible_admissions AS (
     SELECT *
     FROM admissions_base
