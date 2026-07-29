@@ -153,10 +153,11 @@ def build_utilization_features(con: duckdb.DuckDBPyConnection) -> pd.DataFrame:
 
 
 def build_demographic_features(con: duckdb.DuckDBPyConnection) -> pd.DataFrame:
+    # race and insurance already come from the cohort table (extract.py pulls
+    # them from admissions); only gender and age are new here.
     return con.execute("""
-        SELECT c.hadm_id, a.race, a.insurance, p.gender, p.anchor_age
+        SELECT c.hadm_id, p.gender, p.anchor_age
         FROM cohort c
-        JOIN admissions a ON a.hadm_id = c.hadm_id
         JOIN patients p ON p.subject_id = c.subject_id
     """).df()
 
