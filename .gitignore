@@ -2,7 +2,8 @@ __pycache__/
 *.pyc
 .venv/
 .env
-/data/
+/data/raw/
+/data/interim/
 .DS_Store.Rhistory
 .DS_Store
 .Rhistory
